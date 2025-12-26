@@ -88,19 +88,84 @@ export const MOCK_TEMPLATES: Template[] = [
     useCases: ["Starter"],
     frameworks: ["Next.js"],
     css: ["TailwindCSS"],
-    githubRepo: "vercel/next.js",
+    githubRepo: "https://github.com/TOMOSIA-VIETNAM",
     demoUrl: "https://nextjs.org",
-    gettingStarted: `npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+    technologies: {
+      en: `Core Framework
 
-Open http://localhost:3000 with your browser to see the result.
+Next.js 15.5.4 - React framework with App Router and Turbopack
+React 19.1.0 - UI library
+TypeScript 5.9.3 - Type safety
 
-You can start editing the page by modifying app/page.tsx. The page auto-updates as you edit the file.`,
+Styling
+
+Tailwind CSS 4 - Utility-first CSS framework
+SASS 1.93.2 - CSS preprocessor
+Shadcn/ui - Component library built on Radix UI
+Radix UI - Unstyled accessible component primitives
+
+State Management & Data Fetching
+
+TanStack Query (React Query) 5.90.2 - Server state management
+Zustand 5.0.8 - Client state management
+Axios 1.12.2 - HTTP client
+
+Forms
+
+React Hook Form 7.63.0 - Form state management
+
+Code Quality
+
+ESLint 9.36.0 - Code linting
+Prettier 3.6.2 - Code formatting
+Husky 9.1.7 - Git hooks
+lint-staged 16.2.3 - Run linter on staged files
+Conventional Commits - Commit message convention
+Knip - Detect unused files, dependencies, and exports
+
+Testing & Documentation
+
+Vitest 3.2.4 - Unit testing framework
+Storybook 9.1.10 - Component documentation and testing
+Playwright 1.55.1 - E2E testing`,
+      ja: `コアフレームワーク
+
+Next.js 15.5.4 - App RouterとTurbopackを備えたReactフレームワーク
+React 19.1.0 - UIライブラリ
+TypeScript 5.9.3 - 型安全性
+
+スタイリング
+
+Tailwind CSS 4 - ユーティリティファーストのCSSフレームワーク
+SASS 1.93.2 - CSSプリプロセッサ
+Shadcn/ui - Radix UI上に構築されたコンポーネントライブラリ
+Radix UI - スタイルなしのアクセシブルなコンポーネントプリミティブ
+
+ステート管理とデータフェッチング
+
+TanStack Query (React Query) 5.90.2 - サーバーステート管理
+Zustand 5.0.8 - クライアントステート管理
+Axios 1.12.2 - HTTPクライアント
+
+フォーム
+
+React Hook Form 7.63.0 - フォームステート管理
+
+コード品質管理
+
+ESLint 9.36.0 - コードリンティング
+Prettier 3.6.2 - コードフォーマット
+Husky 9.1.7 - Gitフック
+lint-staged 16.2.3 - ステージングされたファイルでリンターを実行
+Conventional Commits - コミットメッセージ規約
+Knip - 未使用のファイル、依存関係、エクスポートを検出
+
+テストとドキュメント
+
+Vitest 3.2.4 - ユニットテストフレームワーク
+Storybook 9.1.10 - コンポーネントドキュメントとテスト
+Playwright 1.55.1 - E2Eテスト`,
+    },
   },
   {
     id: "2",

@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
-import { LanguageSwitcher, useTemplateI18n } from "@/features/templates";
+import { TemplateHeader, useTemplateI18n } from "@/features/templates";
 import type { Template } from "@/features/templates/types/template.types";
 
 import { useTemplateDetail } from "../../hooks/useTemplateDetail";
@@ -87,7 +87,7 @@ function StackSection({ template }: { template: Template }) {
 }
 
 export function TemplateDetail({ id }: TemplateDetailProps) {
-  const { t } = useTemplateI18n();
+  const { t, locale } = useTemplateI18n();
   const { template } = useTemplateDetail(id);
 
   if (!template) {
@@ -107,27 +107,31 @@ export function TemplateDetail({ id }: TemplateDetailProps) {
 
   return (
     <div className="TemplateDetail">
+      <TemplateHeader />
       <div className="container mx-auto max-w-7xl px-4 py-8">
         {/* Header */}
         <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
           <div className="flex-1">
-            <div className="mb-4 flex items-center justify-between">
-              <Link
-                href="/templates"
-                className="text-muted-foreground inline-flex items-center gap-2 text-sm hover:text-foreground"
-              >
-                <ArrowLeft className="size-4" />
-                {t.backToTemplates}
-              </Link>
-              <LanguageSwitcher />
-            </div>
+            <Link
+              href="/templates"
+              className="text-muted-foreground mb-4 inline-flex items-center gap-2 text-sm hover:text-foreground"
+            >
+              <ArrowLeft className="size-4" />
+              {t.backToTemplates}
+            </Link>
             <h1 className="mb-2 text-4xl font-bold">{template.title}</h1>
-            <p className="text-muted-foreground text-lg">{template.description}</p>
+            <p className="text-muted-foreground text-lg">
+              {template.description}
+            </p>
           </div>
           <div className="flex flex-shrink-0 gap-2 lg:ml-8">
             {template.demoUrl && (
               <Button variant="outline" asChild>
-                <a href={template.demoUrl} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={template.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {t.viewDemo}
                   <ExternalLink className="size-4" />
                 </a>
@@ -135,7 +139,11 @@ export function TemplateDetail({ id }: TemplateDetailProps) {
             )}
             <Button asChild>
               <a
-                href={template.githubRepo ? `https://github.com/${template.githubRepo}` : "#"}
+                href={
+                  template.githubRepo
+                    ? `https://github.com/${template.githubRepo}`
+                    : "#"
+                }
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -162,19 +170,19 @@ export function TemplateDetail({ id }: TemplateDetailProps) {
               </Card>
             )}
 
-            {/* Description */}
-            <div className="mb-8">
-              <p className="text-muted-foreground leading-relaxed">{template.description}</p>
-            </div>
-
-            {/* Getting Started */}
-            {template.gettingStarted && (
+            {/* Technologies Used */}
+            {template.technologies && (
               <div className="mb-8">
-                <h2 className="mb-4 text-2xl font-semibold">{t.gettingStarted}</h2>
+                <h2 className="mb-4 text-2xl font-semibold">
+                  {t.technologiesUsed}
+                </h2>
                 <Card>
                   <CardContent className="pt-6">
                     <pre className="overflow-x-auto rounded-md bg-muted p-4 text-sm leading-relaxed">
-                      <code className="text-foreground">{template.gettingStarted}</code>
+                      <code className="text-foreground block whitespace-pre-wrap">
+                        {template.technologies[locale] ||
+                          template.technologies.en}
+                      </code>
                     </pre>
                   </CardContent>
                 </Card>
@@ -197,4 +205,3 @@ export function TemplateDetail({ id }: TemplateDetailProps) {
     </div>
   );
 }
-

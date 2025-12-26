@@ -12,10 +12,10 @@ interface TemplateCardProps {
 
 export function TemplateCard({ template }: TemplateCardProps) {
   return (
-    <Link href={`/templates/${template.id}`}>
-      <Card className="TemplateCard hover:shadow-md transition-shadow cursor-pointer overflow-hidden">
+    <Link href={`/templates/${template.id}`} className="h-full">
+      <Card className="TemplateCard flex h-full flex-col hover:shadow-md transition-shadow cursor-pointer overflow-hidden">
         {template.thumbnail && (
-          <div className="aspect-video w-full overflow-hidden bg-muted">
+          <div className="aspect-video w-full shrink-0 overflow-hidden bg-muted">
             <img
               src={template.thumbnail}
               alt={template.title}
@@ -23,12 +23,12 @@ export function TemplateCard({ template }: TemplateCardProps) {
             />
           </div>
         )}
-        <CardHeader>
-          <CardTitle>{template.title}</CardTitle>
-          <CardDescription>{template.description}</CardDescription>
+        <CardHeader className="flex-1">
+          <CardTitle className="line-clamp-2">{template.title}</CardTitle>
+          <CardDescription className="line-clamp-2">{template.description}</CardDescription>
         </CardHeader>
         {template.useCases && template.useCases.length > 0 && (
-          <CardContent>
+          <CardContent className="mt-auto">
             <div className="flex flex-wrap gap-2">
               {template.useCases.map((useCase) => (
                 <span

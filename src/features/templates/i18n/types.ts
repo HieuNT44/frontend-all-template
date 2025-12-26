@@ -18,7 +18,7 @@ export interface Translations {
   backToTemplates: string;
   viewDemo: string;
   deploy: string;
-  gettingStarted: string;
+  technologiesUsed: string;
   githubRepo: string;
   stack: string;
   templateNotFound: string;

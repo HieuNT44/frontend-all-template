@@ -10,7 +10,6 @@ import type {
   Database,
   Experimentation,
   Framework,
-  Template,
   TemplateFilters,
   UseCase,
 } from "../types/template.types";

@@ -19,13 +19,14 @@ const localeLabels: Record<Locale, string> = {
 
 export function LanguageSwitcher() {
   const { locale, setLocale } = useTemplateI18n();
+  const currentLabel = localeLabels[locale as Locale] || localeLabels.en;
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <button className="flex items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-accent">
           <Globe className="size-4" />
-          <span>{localeLabels[locale]}</span>
+          <span>{currentLabel}</span>
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

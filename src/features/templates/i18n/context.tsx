@@ -2,7 +2,8 @@
 
 import { createContext, useContext, useState, type ReactNode } from "react";
 
-import { defaultLocale, getTranslations, type Locale, type Translations } from "./translations";
+import type { Locale, Translations } from "./types";
+import { defaultLocale, getTranslations } from "./translations";
 
 interface TemplateI18nContextValue {
   locale: Locale;

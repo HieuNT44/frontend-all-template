@@ -1,8 +1,8 @@
 "use client";
 
-import { LanguageSwitcher } from "../LanguageSwitcher/LanguageSwitcher";
 import { TemplateCard } from "../TemplateCard/TemplateCard";
 import { TemplateFilters } from "../TemplateFilters/TemplateFilters";
+import { TemplateHeader } from "../TemplateHeader/TemplateHeader";
 import { TemplateSearch } from "../TemplateSearch/TemplateSearch";
 import { useTemplateController } from "../../hooks/useTemplateController";
 import { useTemplateI18n } from "../../i18n/context";
@@ -24,12 +24,10 @@ export function TemplateList() {
 
   return (
     <div className="TemplateList">
+      <TemplateHeader />
       <div className="container mx-auto px-4 py-8">
         {/* Header Section */}
         <div className="mb-8 flex flex-col items-center gap-4 text-center">
-          <div className="flex w-full items-center justify-end">
-            <LanguageSwitcher />
-          </div>
           <h1 className="text-4xl font-bold">{t.title}</h1>
           <p className="text-muted-foreground max-w-2xl text-lg">{t.description}</p>
           <TemplateSearch
@@ -66,7 +64,7 @@ export function TemplateList() {
           {/* Template Grid */}
           <main className="flex-1">
             {templates.length > 0 ? (
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <div className="grid auto-rows-fr grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {templates.map((template) => (
                   <TemplateCard key={template.id} template={template} />
                 ))}

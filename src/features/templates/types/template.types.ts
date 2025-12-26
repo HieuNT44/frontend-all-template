@@ -53,7 +53,10 @@ export interface Template {
   experimentation?: Experimentation[];
   githubRepo?: string;
   demoUrl?: string;
-  gettingStarted?: string;
+  technologies?: {
+    en: string;
+    ja: string;
+  };
 }
 
 export interface TemplateFilters {
