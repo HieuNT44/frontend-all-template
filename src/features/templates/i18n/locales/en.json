@@ -1,0 +1,24 @@
+{
+  "title": "Explore Our Solutions",
+  "description": "Discover the products and workflows we've built for our clients at TOMOSIA.",
+  "searchPlaceholder": "Search templates...",
+  "filterTemplates": "Filter Templates",
+  "useCase": "Use Case",
+  "useCases": "Use Cases",
+  "framework": "Framework",
+  "css": "CSS",
+  "database": "Database",
+  "authentication": "Authentication",
+  "cms": "CMS",
+  "experimentation": "Experimentation",
+  "noTemplatesFound": "No templates found",
+  "tryAdjustingFilters": "Try adjusting your search or filters",
+  "backToTemplates": "Back to Templates",
+  "viewDemo": "View Demo",
+  "deploy": "Deploy",
+  "gettingStarted": "Getting Started",
+  "githubRepo": "GitHub Repo",
+  "stack": "Stack",
+  "templateNotFound": "Template not found"
+}
+

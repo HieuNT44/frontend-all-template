@@ -1,0 +1,24 @@
+{
+  "title": "ソリューションを探索",
+  "description": "TOMOSIAがクライアントのために構築した製品とワークフローをご覧ください。",
+  "searchPlaceholder": "テンプレートを検索...",
+  "filterTemplates": "テンプレートをフィルター",
+  "useCase": "ユースケース",
+  "useCases": "ユースケース",
+  "framework": "フレームワーク",
+  "css": "CSS",
+  "database": "データベース",
+  "authentication": "認証",
+  "cms": "CMS",
+  "experimentation": "実験",
+  "noTemplatesFound": "テンプレートが見つかりません",
+  "tryAdjustingFilters": "検索またはフィルターを調整してみてください",
+  "backToTemplates": "テンプレートに戻る",
+  "viewDemo": "デモを見る",
+  "deploy": "デプロイ",
+  "gettingStarted": "はじめに",
+  "githubRepo": "GitHubリポジトリ",
+  "stack": "スタック",
+  "templateNotFound": "テンプレートが見つかりません"
+}
+
