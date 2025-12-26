@@ -1,6 +1,6 @@
 {
   "title": "ソリューションを探索",
-  "description": "TOMOSIAがクライアントのために構築した製品とワークフローをご覧ください。",
+  "description": "TOMOSIA VIETNAMがクライアントのために構築した製品とワークフローをご覧ください。",
   "searchPlaceholder": "テンプレートを検索...",
   "filterTemplates": "テンプレートをフィルター",
   "useCase": "ユースケース",
@@ -21,4 +21,3 @@
   "stack": "スタック",
   "templateNotFound": "テンプレートが見つかりません"
 }
-
